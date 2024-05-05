@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Attractions</h1>
+<ul>
+    {% for attraction in attractions %}
+    <li>
+        <a href="{% url 'attraction_detail' attraction.pk %}">{{ attraction.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
